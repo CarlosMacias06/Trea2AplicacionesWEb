@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #543939;
+    color: #452424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden; /* Evitar que haya desplazamiento horizontal */
+}
+
+.container {
+    background-color: rgb(254, 254, 254);
+    width: 100%;
+    max-width: 900px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto; /* Permitir que el contenido no se desborde */
+}
+
+.personal-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permitir que los elementos se acomoden en filas si la pantalla es pequeña */
+    margin-bottom: 30px;
+    text-align: center; /* Asegura que el contenido esté centrado */
+}
+
+.photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+p {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+/* Sección con márgenes entre cada bloque */
+.section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #444;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Media queries para ajustar el diseño en pantallas pequeñas */
+@media (max-width: 768px) {
+    .personal-info {
+        flex-direction: column; /* Se asegura que la imagen y los textos estén en columnas en pantallas pequeñas */
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+
+    .photo {
+        margin: 0 auto 20px auto; /* Centra la imagen en pantallas pequeñas */
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 2em; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    }
+
+    p {
+        font-size: 1em; /* Reduce el tamaño del párrafo en pantallas pequeñas */
+    }
+}
